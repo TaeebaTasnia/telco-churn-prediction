@@ -14,12 +14,13 @@ Telecom companies lose significant revenue when customers leave (churn). This pr
 
 | Model | Precision (Churn) | Recall (Churn) | F1 (Churn) | ROC-AUC |
 |---|---|---|---|---|
-| Logistic Regression (baseline) | — | — | — | — |
-| Random Forest | — | — | — | — |
-| XGBoost (default) | — | — | — | — |
-| **XGBoost (tuned, threshold=0.35)** | — | — | — | **~0.84** |
+| Logistic Regression (baseline) | 0.50 | 0.78 | 0.61 | 0.8456 |
+| Random Forest | 0.63 | 0.49 | 0.55 | 0.8228 |
+| XGBoost (default) | 0.53 | 0.65 | 0.58 | 0.8217 |
+| **XGBoost (tuned, threshold=0.35)** | **0.43** | **0.90** | **0.58** | **0.8424** |
 
-> Run the notebook to populate actual metrics. Target: ROC-AUC > 0.80.
+Best GridSearchCV params: `max_depth=3, n_estimators=300, learning_rate=0.01` (optimised for F1).
+Deployed threshold: **0.35** — maximises recall (0.90) at the cost of precision, matching the business case where missed churners are costlier than false alarms.
 
 ---
 
