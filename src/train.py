@@ -38,7 +38,6 @@ def main():
     # Create XGBClassifier with specified parameters
     xgb_model = xgb.XGBClassifier(
         scale_pos_weight=scale_pos_weight,
-        use_label_encoder=False,
         eval_metric='logloss',
         random_state=42,
         n_estimators=300,

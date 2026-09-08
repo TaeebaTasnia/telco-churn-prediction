@@ -32,7 +32,6 @@ def build_pipeline(model=None) -> Pipeline:
         scale_pos_weight = 2.7  # approximate default; train.py overrides this
         model = xgb.XGBClassifier(
             scale_pos_weight=scale_pos_weight,
-            use_label_encoder=False,
             eval_metric='logloss',
             random_state=42
         )
