@@ -7,7 +7,7 @@ import xgboost as xgb
 
 
 NUMERIC_COLS = ['tenure', 'MonthlyCharges', 'TotalCharges',
-                'avg_monthly_spend', 'num_services']
+                'avg_monthly_spend', 'num_services', 'has_streaming']
 
 CATEGORICAL_COLS = [
     'gender', 'SeniorCitizen', 'Partner', 'Dependents',
@@ -15,7 +15,7 @@ CATEGORICAL_COLS = [
     'OnlineSecurity', 'OnlineBackup', 'DeviceProtection',
     'TechSupport', 'StreamingTV', 'StreamingMovies',
     'Contract', 'PaperlessBilling', 'PaymentMethod',
-    'tenure_bucket', 'has_streaming'
+    'tenure_bucket'
 ]
 
 
